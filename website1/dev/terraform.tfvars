@@ -1,0 +1,17 @@
+VPC_ID                     = "vpc-0f25a4fb097420708"
+PUBLIC_SUBNETS_IDS         = ["subnet-0d5a42fc1efafb7d0", "subnet-051682e869fc78d7c"]
+PRIVATE_SUBNETS_IDS        = ["subnet-0c571e1ecd20a34ee", "subnet-09d175ae6e23725ef"]
+DATABASE_USER              = "admin"
+DATABASE_PASSWORD          = "supersecretpassword"
+DATABASE_NAME              = "wordpress"
+DATABASE_INSTANCE_CLASS    = "db.t3.micro"
+AUTHORISED_CIDR_BLOCKS     = ["10.0.0.0/16"]
+APP_NAME                   = "wordpress"
+ENV_PREFIX                 = "dev"
+CONTAINER_NAME             = "wordpress"
+CONTAINER_PORT             = "8080"
+NB_REPLICAS                = 2
+FARGATE_CPU                = 1024
+FARGATE_MEMORY             = 3072
+DOCKER_IMAGE_NAME          = "bitnami/wordpress"
+DOCKER_IMAGE_TAG           = "latest"
