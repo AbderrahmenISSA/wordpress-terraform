@@ -2,7 +2,7 @@ data "aws_caller_identity" "account" {}
 
 
 module "ecs-wordpress" {
-  source                     = "git::https://github.com/AbderrahmenISSA/terraform-modules.git//ecs-wordpress?ref=https-wordpress" 
+  source                     = "git::https://github.com/AbderrahmenISSA/terraform-modules.git//ecs-wordpress?ref=master" 
   APP_NAME                   = var.APP_NAME
   ENV_PREFIX                 = var.ENV_PREFIX
   AWS_REGION                 = var.AWS_REGION
