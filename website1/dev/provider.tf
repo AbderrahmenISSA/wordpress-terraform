@@ -8,7 +8,7 @@ provider "aws" {
 ########## Backend s3
 terraform {
   backend "s3" {
-    bucket  = "m2c-terraform"
+    bucket  = "engie-francerenouvelables-hq-noprod-terraform-state"
     key     = "ecs/wordpress/dev/terraform.tfstate"
     region  = "eu-west-1"
     encrypt = true

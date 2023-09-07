@@ -11,7 +11,11 @@ variable "PUBLIC_SUBNETS_IDS" {
     type    = list(any)
     default = []
 }
-variable "PRIVATE_SUBNETS_IDS" {
+variable "PRIVATE_APP_SUBNETS_IDS" {
+    type    = list(any)
+    default = []
+}
+variable "PRIVATE_DB_SUBNETS_IDS" {
     type    = list(any)
     default = []
 }
@@ -31,10 +35,16 @@ variable "AUTHORISED_CIDR_BLOCKS" {
 }
 
 ########################### ECS Service ###############################
+variable "TASK_EXECUTION_ROLE_ARN" {}
 variable "CONTAINER_NAME" {}
 variable "CONTAINER_PORT" {}
 variable "NB_REPLICAS" {}
 variable "FARGATE_CPU" {}
 variable "FARGATE_MEMORY" {}
+variable "CERTIFICATE_ARN" {}
 variable "DOCKER_IMAGE_NAME" {}
 variable "DOCKER_IMAGE_TAG" {}
+
+##################### ROUTE 53 CONFIGURATION #########################
+variable "ZONE" {}
+variable "RECORD" {}
